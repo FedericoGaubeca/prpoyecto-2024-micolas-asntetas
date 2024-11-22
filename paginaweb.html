@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reloj Despertador</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <!-- Título con icono de reloj -->
+  <header>
+    <h1 id="title">Rel<img src="logo.png" class="clock-icon"></img>j Despertador</h1>
+  </header>
+
+  <!-- Pantalla inicial -->
+  <main id="alarm-container">
+    <div id="alarm-list">
+      <div id="no-alarms-message">No hay alarmas</div>
+    </div>
+    <button id="add-alarm-btn" onclick="showAddAlarmForm()">+</button>
+  </main>
+
+  <!-- Formulario para agregar alarma -->
+  <div id="add-alarm-form" class="hidden">
+    <h2>Configurar Alarma</h2>
+    <input type="time" id="alarm-time" value="00:00">
+    <div class="days-selector">
+      <span data-day="D">D</span>
+      <span data-day="L">L</span>
+      <span data-day="M">M</span>
+      <span data-day="M">M</span>
+      <span data-day="J">J</span>
+      <span data-day="V">V</span>
+      <span data-day="S">S</span>
+    </div>
+    <button onclick="cancelAddAlarm()">Cancelar</button>
+    <button onclick="confirmAddAlarm()">Confirmar</button>
+  </div>
+
+  <!-- Formulario para eliminar alarma -->
+  <div id="delete-alarm-form" class="hidden">
+    <h2>Eliminar Alarma</h2>
+    <div id="select-alarm-list"></div>
+    <button onclick="cancelDeleteAlarm()">Cancelar</button>
+    <button onclick="confirmDeleteAlarm()">Confirmar</button>
+  </div>
+
+  <script src="functions.js"></script>
+</body>
+</html>

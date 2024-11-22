@@ -1,0 +1,113 @@
+/* Estilos básicos */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: purple;
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  
+  .clock-icon {
+    width: 50px;
+    height: 45px;
+  }
+  
+  /* Pantalla inicial */
+  #alarm-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #alarm-time {
+    display: block;
+    margin: 10px auto; /* Center it horizontally */
+    padding: 8px 12px; /* Add some padding for a better look */
+    font-size: 16px; /* Improve font size for readability */
+    border: 1px solid #ccc; /* Add a subtle border */
+    border-radius: 4px; /* Round the corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Text color */
+    width: 90%; /* Make it responsive */
+    max-width: 300px; /* Limit the maximum width */
+  }
+  
+  
+  #no-alarms-message {
+    font-size: 1.2em;
+    color: gray;
+  }
+  
+  #add-alarm-btn {
+    background-color: purple;
+    color: white;
+    font-size: 2em;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  /* Formulario para agregar y eliminar alarmas */
+  .hidden {
+    display: none;
+  }
+  
+  #add-alarm-form, #delete-alarm-form {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .days-selector span {
+    cursor: pointer;
+    padding: 5px;
+    margin: 2px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  
+  .days-selector span.selected {
+    background-color: purple;
+  }
+  
+  button {
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: gray;
+  }
+  
+  .alarm-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px; /* Add spacing inside the alarm */
+    margin: 10px 0; /* Add spacing between alarms */
+    border: 1px solid #cc00ff; /* Add a light border */
+    border-radius: 5px; /* Round the corners */
+    background-color: #ffffff00; /* Set a clean background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .alarm-item:hover {
+    background-color: #d94cec; /* Change background on hover for interactivity */
+  }
+  
